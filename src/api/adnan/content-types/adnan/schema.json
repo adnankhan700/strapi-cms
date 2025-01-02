@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "adnans",
+  "info": {
+    "singularName": "adnan",
+    "pluralName": "adnans",
+    "displayName": "adnan"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "displayName": "titleNew",
+      "type": "component",
+      "repeatable": false,
+      "component": "title69.title-new"
+    },
+    "description": {
+      "type": "text"
+    },
+    "accordionContent": {
+      "displayName": "accordionContent",
+      "type": "component",
+      "repeatable": true,
+      "component": "title69.accordion-content"
+    }
+  }
+}

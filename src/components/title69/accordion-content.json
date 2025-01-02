@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_title69_accordion_contents",
+  "info": {
+    "displayName": "accordionContent"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "header": {
+      "type": "string"
+    },
+    "description": {
+      "displayName": "description",
+      "type": "component",
+      "repeatable": false,
+      "component": "title69.description"
+    }
+  }
+}

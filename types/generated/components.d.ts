@@ -487,6 +487,65 @@ export interface SharedTitleDescription extends Struct.ComponentSchema {
   };
 }
 
+export interface Title69AccordionContent extends Struct.ComponentSchema {
+  collectionName: 'components_title69_accordion_contents';
+  info: {
+    displayName: 'accordionContent';
+  };
+  attributes: {
+    description: Schema.Attribute.Component<'title69.description', false>;
+    header: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface Title69Description extends Struct.ComponentSchema {
+  collectionName: 'components_title69_descriptions';
+  info: {
+    displayName: 'description';
+  };
+  attributes: {
+    description: Schema.Attribute.Component<'title69.description1', true>;
+  };
+}
+
+export interface Title69Description1 extends Struct.ComponentSchema {
+  collectionName: 'components_title69_description1s';
+  info: {
+    displayName: 'description1';
+  };
+  attributes: {};
+}
+
+export interface Title69Title extends Struct.ComponentSchema {
+  collectionName: 'components_title69_titles';
+  info: {
+    displayName: 'title';
+  };
+  attributes: {
+    Title: Schema.Attribute.Component<'title69.title1', false>;
+  };
+}
+
+export interface Title69TitleNew extends Struct.ComponentSchema {
+  collectionName: 'components_title69_title_news';
+  info: {
+    displayName: 'titleNew';
+  };
+  attributes: {
+    left: Schema.Attribute.String;
+    right: Schema.Attribute.String;
+  };
+}
+
+export interface Title69Title1 extends Struct.ComponentSchema {
+  collectionName: 'components_title69_title1s';
+  info: {
+    displayName: 'title1';
+  };
+  attributes: {};
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -525,6 +584,12 @@ declare module '@strapi/strapi' {
       'shared.steps': SharedSteps;
       'shared.title': SharedTitle;
       'shared.title-description': SharedTitleDescription;
+      'title69.accordion-content': Title69AccordionContent;
+      'title69.description': Title69Description;
+      'title69.description1': Title69Description1;
+      'title69.title': Title69Title;
+      'title69.title-new': Title69TitleNew;
+      'title69.title1': Title69Title1;
     }
   }
 }

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_title69_titles",
+  "info": {
+    "displayName": "title"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "displayName": "title1",
+      "type": "component",
+      "repeatable": false,
+      "component": "title69.title1"
+    }
+  }
+}

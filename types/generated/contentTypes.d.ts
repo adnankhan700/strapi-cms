@@ -398,6 +398,36 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiAdnanAdnan extends Struct.SingleTypeSchema {
+  collectionName: 'adnans';
+  info: {
+    displayName: 'adnan';
+    pluralName: 'adnans';
+    singularName: 'adnan';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    accordionContent: Schema.Attribute.Component<
+      'title69.accordion-content',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::adnan.adnan'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.Component<'title69.title-new', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiAppBannerAppBanner extends Struct.SingleTypeSchema {
   collectionName: 'app_banners';
   info: {
@@ -775,6 +805,7 @@ export interface ApiOldArticleOldArticle extends Struct.CollectionTypeSchema {
   attributes: {
     author: Schema.Attribute.String;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
+    Conclusion: Schema.Attribute.Text;
     content: Schema.Attribute.RichText;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1307,6 +1338,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about.about': ApiAboutAbout;
+      'api::adnan.adnan': ApiAdnanAdnan;
       'api::app-banner.app-banner': ApiAppBannerAppBanner;
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;

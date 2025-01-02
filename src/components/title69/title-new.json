@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_title69_title_news",
+  "info": {
+    "displayName": "titleNew"
+  },
+  "options": {},
+  "attributes": {
+    "left": {
+      "type": "string"
+    },
+    "right": {
+      "type": "string"
+    }
+  }
+}
